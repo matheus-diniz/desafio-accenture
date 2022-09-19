@@ -16,7 +16,7 @@ import org.openqa.selenium.By;
 public class desafioAccenture {
 
     @Dado("que eu acesse o site {string}")
-    public void que_eu_acesse_o_site(String string) throws InterruptedException {
+    public void que_eu_acesse_o_site(String string) {
         // Write code here that turns the phrase above into concrete actions
         SingletonRunner.getInstance().get(string);
         SingletonRunner.getInstance().manage().window().maximize();
