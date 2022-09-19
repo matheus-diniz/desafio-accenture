@@ -1,16 +1,14 @@
 package br.com.matheusdiniz.pages;
 
 import br.com.matheusdiniz.resources.SingletonRunner;
-import io.cucumber.java.ro.Si;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class insurantDataTab {
+public class InsurantDataTab {
 
     private static String insurantDataTabId = "enterinsurantdata";
     private static String iptFirstNameId = "firstname";
@@ -31,6 +29,8 @@ public class insurantDataTab {
     private static String ipWebSiteId = "website";
     private static String ipFileBtnOpenId = "open";
     private static String btnNextId = "nextenterproductdata";
+
+    private static String grpHobbiesClass = "group";
 
     private static WebDriverWait wait = new WebDriverWait(SingletonRunner.getInstance(), Duration.ofSeconds(8));
 
@@ -80,7 +80,8 @@ public class insurantDataTab {
     }
 
     public static WebElement radioSpeedingHobbyOpt(){
-        return SingletonRunner.getInstance().findElement(By.id(rdSpeedingHobbyId));
+        return //SingletonRunner.getInstance().findElement(By.id(rdSpeedingHobbyId));
+        SingletonRunner.getInstance().findElement(By.xpath("//*[@id=\"insurance-form\"]/div/section[2]/div[10]/p/label[1]"));
     }
 
     public static WebElement radioBungeeJumpingHobbyOpt(){
@@ -109,6 +110,10 @@ public class insurantDataTab {
 
     public static WebElement btnNextProductData(){
         return SingletonRunner.getInstance().findElement(By.id(btnNextId));
+    }
+
+    public static WebElement groupHobbies(){
+        return SingletonRunner.getInstance().findElement(By.className(grpHobbiesClass));
     }
 
 

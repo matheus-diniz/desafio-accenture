@@ -1,11 +1,10 @@
 package br.com.matheusdiniz.pages;
 
 import br.com.matheusdiniz.resources.SingletonRunner;
-import io.cucumber.java.ro.Si;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class vechileDataTab {
+public class VechileDataTab {
 
     private static String btnNextId = "nextenterinsurantdata";
 
@@ -30,8 +29,12 @@ public class vechileDataTab {
     private static String iptLicensePlateNumberId = "licenseplatenumber";
     private static String iptAnnualMileageId = "annualmileage";
 
+    private static String selNumberofSeatsMotorcycleId = "numberofseatsmotorcycle";
+
+
     public static WebElement btnNext(){
         return SingletonRunner.getInstance().findElement(By.id(btnNextId));
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(btnNextId)));
     }
 
     public static WebElement iptEnginePerfomance(){
@@ -40,6 +43,8 @@ public class vechileDataTab {
 
     public static WebElement iptListPrice(){
         return SingletonRunner.getInstance().findElement(By.id(iptListPriceId));
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(iptListPriceId)));
+
     }
 
     public static WebElement iptLicensePlateNumber(){
@@ -48,42 +53,58 @@ public class vechileDataTab {
 
     public static WebElement iptAnnualMileage(){
         return SingletonRunner.getInstance().findElement(By.id(iptAnnualMileageId));
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(iptAnnualMileageId)));
     }
 
     public static WebElement selMake(){
         return SingletonRunner.getInstance().findElement(By.id(selMakeId));
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(selMakeId)));
     }
 
     public static WebElement selModel(){
         return SingletonRunner.getInstance().findElement(By.id(selModelId));
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(selModelId)));
+
     }
 
     public static WebElement iptCylinderCapacity(){
-        return SingletonRunner.getInstance().findElement(By.id(iptCylinderCapacityId));
+        return //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(iptCylinderCapacityId)));
+        SingletonRunner.getInstance().findElement(By.id(iptCylinderCapacityId));
     }
 
     public static WebElement iptEnginePerformance(){
-        return SingletonRunner.getInstance().findElement(By.id(iptEngPerfId));
+        return //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(iptEngPerfId)));
+        SingletonRunner.getInstance().findElement(By.id(iptEngPerfId));
     }
 
     public static WebElement dateDateofManufacture(){
-        return SingletonRunner.getInstance().findElement(By.id(dtpDateofManufactureId));
+        return //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(dtpDateofManufactureId)));
+        SingletonRunner.getInstance().findElement(By.id(dtpDateofManufactureId));
     }
 
     public static WebElement selNumberofSeats(){
-        return SingletonRunner.getInstance().findElement(By.id(selNumberofSeatsId));
+        return //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(selNumberofSeatsId)));
+        SingletonRunner.getInstance().findElement(By.id(selNumberofSeatsId));
+    }
+
+    public static WebElement selNumberofSeatsMotorcycle(){
+        return //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(selNumberofSeatsMotorcycleId)));
+        SingletonRunner.getInstance().findElement(By.id(selNumberofSeatsMotorcycleId));
     }
 
     public static WebElement selFuelType(){
-        return SingletonRunner.getInstance().findElement(By.id(selFuelTypeId));
+        return //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(selFuelTypeId)));
+        SingletonRunner.getInstance().findElement(By.id(selFuelTypeId));
     }
 
     public static WebElement iptPayload(){
-        return SingletonRunner.getInstance().findElement(By.id(iptPayloadId));
+        return //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(iptPayloadId)));
+        SingletonRunner.getInstance().findElement(By.id(iptPayloadId));
     }
 
     public static WebElement iptTotalWeight(){
-        return SingletonRunner.getInstance().findElement(By.id(iptTotalWeightId));
+        return //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(iptTotalWeightId)));
+        SingletonRunner.getInstance().findElement(By.id(iptTotalWeightId));
     }
 
 

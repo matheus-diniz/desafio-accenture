@@ -22,6 +22,8 @@ public class SingletonRunner {
                     if (driver == null){
                         System.setProperty("webdriver.chrome.driver","driver/chromedriver.exe");
                         driver = new ChromeDriver();
+                        driver.manage().window().maximize();
+                        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     }
                 }
         }
