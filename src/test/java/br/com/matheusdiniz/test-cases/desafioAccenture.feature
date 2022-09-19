@@ -9,8 +9,16 @@ Funcionalidade: Fazer desafio Accenture
 
   Cenario: Preencher aba Dados do Veiculo
     Quando eu preencho os campos
-    E clico em next
+    E clico em next insurant data
     Entao Eu devo ver a aba Dados do Segurado
+
+
+    Cenario: Preencher aba Dados Dados do Segurado
+      Quando aba Dados do Segurado é exibida
+      E eu preencho os campos do segurado
+      E clico em next product data
+      Entao Eu devo ver a aba Dados do Produto
+
 
 
 
