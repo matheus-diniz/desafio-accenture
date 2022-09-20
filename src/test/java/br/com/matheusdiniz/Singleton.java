@@ -1,24 +1,30 @@
-package br.com.matheusdiniz.resources;
+package br.com.matheusdiniz;
 
-import io.cucumber.java.AfterAll;
 import io.cucumber.java.BeforeAll;
+
+import io.cucumber.junit.platform.engine.Cucumber;
+import org.junit.platform.suite.api.IncludeEngines;
+import org.junit.platform.suite.api.SelectClasspathResource;
+import org.junit.platform.suite.api.Suite;
+import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class SingletonRunner {
 
-    private static WebDriver driver;
 
-    private SingletonRunner(){
+public class Singleton {
+
+    private static volatile WebDriver driver;
+
+    private Singleton(){
     }
 
     @BeforeAll
     public static synchronized WebDriver getInstance(){
         if (driver == null){
-                synchronized (SingletonRunner.class){
+                synchronized (Singleton.class){
                     if (driver == null){
                         System.setProperty("webdriver.chrome.driver","driver/chromedriver.exe");
                         driver = new ChromeDriver();

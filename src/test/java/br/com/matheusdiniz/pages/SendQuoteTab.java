@@ -1,6 +1,6 @@
 package br.com.matheusdiniz.pages;
 
-import br.com.matheusdiniz.resources.SingletonRunner;
+import br.com.matheusdiniz.Singleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -20,31 +20,31 @@ public class SendQuoteTab {
     private static String btnSendId = "sendemail";
 
     public static WebElement sendQuoteTab(){
-        return SingletonRunner.getInstance().findElement(By.id(sendQuoteTabId));
+        return Singleton.getInstance().findElement(By.id(sendQuoteTabId));
     }
 
     public static WebElement sucessAlert(){
-        return SingletonRunner.getInstance().findElement(By.xpath("/html/body/div[4]"));
+        return Singleton.getInstance().findElement(By.xpath("/html/body/div[4]"));
     }
 
     public static WebElement iptEmail(){
-        return SingletonRunner.getInstance().findElement(By.id(iptEmailId));
+        return Singleton.getInstance().findElement(By.id(iptEmailId));
     }
 
     public static WebElement iptUserName(){
-        return SingletonRunner.getInstance().findElement(By.id(iptUserNameId));
+        return Singleton.getInstance().findElement(By.id(iptUserNameId));
     }
 
     public static WebElement iptPassword(){
-        return SingletonRunner.getInstance().findElement(By.id(iptPasswordId));
+        return Singleton.getInstance().findElement(By.id(iptPasswordId));
     }
 
     public static WebElement iptConfirmPassword(){
-        return SingletonRunner.getInstance().findElement(By.id(iptConfirmPasswordId));
+        return Singleton.getInstance().findElement(By.id(iptConfirmPasswordId));
     }
 
     public static WebElement btnSend(){
-        return SingletonRunner.getInstance().findElement(By.id(btnSendId));
+        return Singleton.getInstance().findElement(By.id(btnSendId));
     }
 
 

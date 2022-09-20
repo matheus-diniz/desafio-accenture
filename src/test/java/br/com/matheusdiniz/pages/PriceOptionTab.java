@@ -1,6 +1,6 @@
 package br.com.matheusdiniz.pages;
 
-import br.com.matheusdiniz.resources.SingletonRunner;
+import br.com.matheusdiniz.Singleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -11,15 +11,15 @@ public class PriceOptionTab {
     private static String btnNextSendQuoteId = "nextsendquote";
 
     public static WebElement priceOptTab(){
-        return SingletonRunner.getInstance().findElement(By.id(priceOptTabId));
+        return Singleton.getInstance().findElement(By.id(priceOptTabId));
     }
 
     public static WebElement selectGoldOption(){
-        return SingletonRunner.getInstance().findElement(By.xpath(selGolOptionXpath));
+        return Singleton.getInstance().findElement(By.xpath(selGolOptionXpath));
     }
 
     public static WebElement btnNextSendQuote(){
-        return SingletonRunner.getInstance().findElement(By.id(btnNextSendQuoteId));
+        return Singleton.getInstance().findElement(By.id(btnNextSendQuoteId));
     }
 
 
